@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- dados de Conexão com o Banco -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/TrabalhoJavaBDIII</property>
+		<property name="hibernate.connection.username">rafab</property>
+		<property name="hibernate.connection.password">200</property>
+ <!-- Quando Banco de dados será utilizado (PostgreSQL, MySQL, SQLServer, Oracle) -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.jdbc.batch_size">20</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 
+		Ações que podem ser executadas:
+		validate: Apenas valida se as tabelas estão conforme o modelo de entidades 
+		update: Atualiza as tabelas conforme estão as entidades
+		create: Cria as tabelas que não existem
+		create-drop: Apaga todas as tabelas e recria		
+		 -->		
+ 
+		<!-- Lista das entidades que serão persistidas no Banco de Dados-->		
+		<mapping class="JavaBDIII.Cliente" />
+		<mapping class="JavaBDIII.Endereco" />
+		<mapping class="JavaBDIII.Telefone" />
+		<mapping class="JavaBDIII.Produto" />
+		<mapping class="JavaBDIII.Venda" />				
+	</session-factory>
+</hibernate-configuration>
