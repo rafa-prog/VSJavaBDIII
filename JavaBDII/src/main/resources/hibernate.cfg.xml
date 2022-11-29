@@ -6,9 +6,9 @@
 	<session-factory>
 		<!-- dados de Conexão com o Banco -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/TrabalhoJavaBDIII</property>
-		<property name="hibernate.connection.username">rafab</property>
-		<property name="hibernate.connection.password">200</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/forca2</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">docker</property>
  <!-- Quando Banco de dados será utilizado (PostgreSQL, MySQL, SQLServer, Oracle) -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 		<property name="hibernate.show_sql">true</property>
